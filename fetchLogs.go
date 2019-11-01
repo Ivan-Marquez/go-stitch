@@ -30,8 +30,8 @@ func setLogRequest(accessToken, projectID, appID string) *http.Request {
 	return req
 }
 
-// FetchLogs retrieves logs from MongoDB Stitch and returns a LogReponse
-func FetchLogs(accessToken, projectID, appID string) (response *LogResponse, err error) {
+// FetchRecentLogs retrieves logs from MongoDB Stitch and returns a LogReponse
+func FetchRecentLogs(accessToken, projectID, appID string) (response *LogResponse, err error) {
 	client := http.Client{}
 
 	req := setLogRequest(accessToken, projectID, appID)
